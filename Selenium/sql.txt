@@ -1,0 +1,23 @@
+select _id, count(id_math_category_detail) as "countT"
+from math_db
+group by id_math_category_detail
+HAVING _id= 1 or _id = 6
+order by _id asc
+
+select _id
+from math_db
+where (_id = 7) or (_id = 90)
+order by _id asc
+
+select *
+from question_mix
+where (Math_Type not in ('calculate','rightOrWrong'))
+
+select *
+from question_mix
+where (Math_Type like ('c%')) or (Math_Type like ('r%'))
+
+
+select *
+from question_mix
+where (Math_Type not like ('c%'))
